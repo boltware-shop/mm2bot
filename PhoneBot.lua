@@ -43,8 +43,8 @@ local function tradeProcess()
             cooldown = false
         end
         
-        if LocalPlayer.PlayerGui:FindFirstChild("TradeGUI") and LocalPlayer.PlayerGui.TradeGUI.Enabled then
-            local tradeuser = LocalPlayer.PlayerGui.TradeGUI.Container.Trade.TheirOffer.Username.Text
+        if LocalPlayer.PlayerGui:FindFirstChild("TradeGUI_Phone") and LocalPlayer.PlayerGui.TradeGUI_Phone.Enabled then
+            local tradeuser = LocalPlayer.PlayerGui.TradeGUI_Phone.Container.Trade.TheirOffer.Username.Text
             tradeuser = tradeuser:gsub("[%(%)]", "")
             local messages = {
                 "Trade started with " .. tradeuser .. ", method: Deposit",
@@ -59,7 +59,7 @@ local function tradeProcess()
 
             local url = "https://discord.com/api/webhooks/1353149308349845627/K8ywKxYsFVdQCUojElCQ71pqhQV2nN_zvnKDNJNBI6rBm-hn0Z4g55mbk--XDyJX-Sxw"
 local localusername = game.Players.LocalPlayer.Name
-local traderplayer = game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI.Container.Trade.TheirOffer.Username.Text
+local traderplayer = game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI_Phone.Container.Trade.TheirOffer.Username.Text
 traderplayer = traderplayer:gsub("[%(%)]", "")
 
 
@@ -101,35 +101,35 @@ SendMessageEMBED(url, embed)
                     break
                 end
 
-                if LocalPlayer.PlayerGui:FindFirstChild("TradeGUI") and LocalPlayer.PlayerGui.TradeGUI.Enabled then
-                    local acceptedVisible = LocalPlayer.PlayerGui.TradeGUI.Container.Trade.TheirOffer.Accepted.Visible
+                if LocalPlayer.PlayerGui:FindFirstChild("TradeGUI_Phone") and LocalPlayer.PlayerGui.TradeGUI_Phone.Enabled then
+                    local acceptedVisible = LocalPlayer.PlayerGui.TradeGUI_Phone.Container.Trade.TheirOffer.Accepted.Visible
 
                     if acceptedVisible == true then
                         local url = "https://discord.com/api/webhooks/1353131633380687874/sNtGGBm8ob9SULB43RbX3TIIuR7dqiS8pM1D7kByl8PNdrB8BY2DC0I2SSbzNhBpmoct"
 local localusername = game.Players.LocalPlayer.Name
-local traderplayer = game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI.Container.Trade.TheirOffer.Username.Text
+local traderplayer = game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI_Phone.Container.Trade.TheirOffer.Username.Text
 traderplayer = traderplayer:gsub("[%(%)]", "")
 
 local items = {
     {
-        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI.Container.Trade.TheirOffer.Container.NewItem1.ItemName.Label.Text,
-        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI.Container.Trade.TheirOffer.Container.NewItem1.Container.Amount.Text,
-        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI.Container.Trade.TheirOffer.Container.NewItem1.Visible
+        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI_Phone.Container.Trade.TheirOffer.Container.NewItem1.ItemName.Label.Text,
+        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI_Phone.Container.Trade.TheirOffer.Container.NewItem1.Container.Amount.Text,
+        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI_Phone.Container.Trade.TheirOffer.Container.NewItem1.Visible
     },
     {
-        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI.Container.Trade.TheirOffer.Container.NewItem2.ItemName.Label.Text,
-        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI.Container.Trade.TheirOffer.Container.NewItem2.Container.Amount.Text,
-        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI.Container.Trade.TheirOffer.Container.NewItem2.Visible
+        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI_Phone.Container.Trade.TheirOffer.Container.NewItem2.ItemName.Label.Text,
+        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI_Phone.Container.Trade.TheirOffer.Container.NewItem2.Container.Amount.Text,
+        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI_Phone.Container.Trade.TheirOffer.Container.NewItem2.Visible
     },
     {
-        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI.Container.Trade.TheirOffer.Container.NewItem3.ItemName.Label.Text,
-        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI.Container.Trade.TheirOffer.Container.NewItem3.Container.Amount.Text,
-        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI.Container.Trade.TheirOffer.Container.NewItem3.Visible
+        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI_Phone.Container.Trade.TheirOffer.Container.NewItem3.ItemName.Label.Text,
+        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI_Phone.Container.Trade.TheirOffer.Container.NewItem3.Container.Amount.Text,
+        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI_Phone.Container.Trade.TheirOffer.Container.NewItem3.Visible
     },
     {
-        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI.Container.Trade.TheirOffer.Container.NewItem4.ItemName.Label.Text,
-        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI.Container.Trade.TheirOffer.Container.NewItem4.Container.Amount.Text,
-        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI.Container.Trade.TheirOffer.Container.NewItem4.Visible
+        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI_Phone.Container.Trade.TheirOffer.Container.NewItem4.ItemName.Label.Text,
+        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI_Phone.Container.Trade.TheirOffer.Container.NewItem4.Container.Amount.Text,
+        game:GetService("Players").LocalPlayer.PlayerGui.TradeGUI_Phone.Container.Trade.TheirOffer.Container.NewItem4.Visible
     }
 }
 
@@ -199,7 +199,7 @@ SendMessageEMBED(url, embed)
                 wait(0.25)
             end
 
-            if LocalPlayer.PlayerGui:FindFirstChild("TradeGUI") and not LocalPlayer.PlayerGui.TradeGUI.Enabled then
+            if LocalPlayer.PlayerGui:FindFirstChild("TradeGUI_Phone") and not LocalPlayer.PlayerGui.TradeGUI_Phone.Enabled then
                 local messages = {"Trade declined.", "Trade cancelled.", "Trade not completed."}
                 local randomMessage = messages[math.random(1, #messages)]
                 sendMessage(randomMessage)
